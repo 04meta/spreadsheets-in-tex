@@ -26,7 +26,7 @@ my_scores = {
 			my original spreadsheet had the tier of each song listed with the song,
 			but the difference between a "high" and a "low" 20 turns out to not be very big
 		]]
-		STAGER={tier="subjective", rank="S"},
+		STAGER={rank="S"},
 		["Shub Niggurath"]={rank="AAA"},
 		Vacuum={rank="AAA"},
 		["Bad Apple!!"]={rank="AA+", xx=true},
