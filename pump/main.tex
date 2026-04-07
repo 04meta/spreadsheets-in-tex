@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+
+\newcount\totalrating % for Lua code to write to later
+\directlua{dofile("score-table.lua")}
+\newcommand\soft{slop}
+
+% for S19/D19 charts
+\newcommand\singlechart[1]{\directlua{singlechart(#1)}}
+\newcommand\doublechart[1]{\directlua{doublechart(#1)}}
+% for 20/21 charts
+\newcommand\fullchart[1]{\directlua{fullchart(#1)}}
+% co-op charts have much more reason to list the tier-list placements,
+% so have a separate system for them
+\newcommand\coopchart[1]{\directlua{coopchart(#1)}}
+
+
+\begin{document}
+This is a port of my \textit{Pump It Up} title-tracking spreadsheet to \LaTeX.
+I began this project when I found out that Apple was deprecating Numbers 14.5 in favor of a subscription-based service that sounds a lot like why I don't care for Micro\soft\ Excel.
+
+There's just one more thing to bring up: most of my recent plays are on a machine that hasn't had the opportunity to upgrade to \textit{Pump It Up Phoenix}, which means that the title on my actual AM.PASS card is still ``Intermediate Lv.~9''.
+Scores achieved on XX are converted to Phoenix grades by taking a picture of the results screen, adding or subtracting to the perfect count based on the changes Phoenix made to hold-tick counts in the chart, and ignoring the max combo.
+The result is almost always accurate, especially seeing as the only song you're \textit{likely} to drop holds in is 8~6~S20, which doesn't have any hold-tick changes to begin with.
+This means that large miss-count differences aren't really of concern and the only problem is that I can't know where the maximum combo starts and ends; this makes less than 1000 points of difference in most cases.
+
+%Without further ado, I've been trying to also get the ``Intermediate Lv.~10'' title requirements with only S19s:\\
+%\singlechart{19}\\
+%...and with only D19s:\\
+%\doublechart{19}\\
+
+\begin{table}[htbp]
+\fullchart{20}
+\end{table}
+
+\fullchart{20,true}
+I have \the\numexpr13000-\totalrating\ points left to get to Advanced Lv.~1, or about \the\numexpr(13000-\totalrating)/650\ more 20 clears; in other words, I'm \the\numexpr\totalrating/130\% of the way there. Promising stuff, I suppose?
+
+\begin{table}[htbp]
+\fullchart{21}
+\end{table}
+
+\fullchart{21,true}
+Advanced~4 requires you to already have Advanced~3, but it's nice being \the\numexpr\totalrating/150\% of the way there even before that.
+
+\begin{table}[htbp]
+\coopchart{nil}
+\end{table}
+
+\coopchart{true}
+Co-op titles are a lot harder to get, because you have to convince people to play them on your card, and there are like five people I've met that can play the easiest co-op charts to begin with (they start at about D10).
+I'm only \the\numexpr\totalrating/300\% towards Co-Op Lv.~1.
+
+\end{document}

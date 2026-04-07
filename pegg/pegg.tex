@@ -1,0 +1,17 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{longtable}
+\usepackage{hyperref}
+\newcommand\soft{slop}
+\begin{document}
+I had a spreadsheet of what \href{https://googology.miraheze.org/wiki/Psi%27s_Ever-Growing_Googolism}{PEGG} was about to be up to had PsiCubed not left the community before defining R.
+R\(x\) was meant to correspond to approximately \(f_{\Gamma_0}(x)\) in FGH;
+on 30~September 2023, PEGG surpassed Q10 (or about \(f_{\varepsilon_0}(10)\)), with a rule about a transition to R but no formal definition thereof to use for it.
+However, it turns out basically any reasonable definition of R has Q10.0014 below R\((2 + 10^{-10})\), so that's not a problem!
+
+I didn't want to do it on Google Sheets, but I also didn't really have anywhere to publish it because of that.
+With Apple starting to take a Micro\soft\ approach to their answers to Word, Excel, and PowerPoint, I saw fit to port my spreadsheets to \TeX, though.
+
+\begin{longtable}{r|crl}
+\directlua{dofile("pegg.lua")}
+\end{longtable}
+\end{document}
