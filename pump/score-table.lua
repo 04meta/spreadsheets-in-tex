@@ -35,7 +35,6 @@ my_scores = {
 		Conflict={rank="AA"},
 		["Dream to Nightmare"]={rank="AA", xx=true},
 		EMOMOMO={rank="AA"},
-		["ERRORCODE: 0"]={rank="AA", xx=true},
 		Moonlight={rank="AA", xx=true},
 		Passacaglia={rank="AA"},
 		["Super Fantasy"]={rank="AA", xx=true},
@@ -43,6 +42,7 @@ my_scores = {
 		["Hello William"]={rank="A+", xx=true},
 		Bee={xx=true}, -- I didn't take a picture of the score. this is scored as an A (0.8x)
 		Snapping={xx=true},
+		["ERRORCODE: 0"]={rank="AA+", xx=true},
 	},
 	D19 = {
 		["Get Up (and go)"]={rank="AAA+", xx=true},
@@ -62,6 +62,7 @@ my_scores = {
 		Desaparecer={rank="AA", xx=true},
 		GLORIA={rank="AA", xx=true},
 		["Vacuum Cleaner"]={rank="A+", xx=true},
+		Winter={rank="A+", xx=true}, -- also a 19 in XX
 	},
 	D20 = {
 		STAGER={rank="AAA"},
@@ -70,6 +71,7 @@ my_scores = {
 		Moonlight={rank="AA", xx=true},
 		Tepris={rank="AA", xx=true}, -- I have an HJ clear on this with 19 gauge (because it's D19 in XX). that's... something?
 		["DJ Otada"]={xx=true},
+		Cleaner={rank="AAA", xx=true},
 	},
 	S21 = {
 		["Gargoyle - FULL SONG"]={rank="AA+", xx=true}, -- EXC's chart
