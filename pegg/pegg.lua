@@ -95,7 +95,6 @@ function speculativechart(end_year, end_month, end_day)
 		date = date + 24*60*60
 		local key = os.date("%Y-%m-%d", date)
 		value = value + base * 38.5
-		print(key, closed_multiplier)
 		uncertainty = uncertainty + (base/denominator)^2 * 1051.05 * closed_multiplier
 		if is_closed(date) then
 			closed_multiplier = closed_multiplier + 2
@@ -104,10 +103,10 @@ function speculativechart(end_year, end_month, end_day)
 		end
 		
 		if value >= 10 * denominator then
-			value = value * 7 - 50*denominator
+			value = value * 7.0 - 50.0*denominator
 			uncertainty = uncertainty * 0.49
-			denominator = denominator * 10
-			base = base * 7
+			denominator = denominator * 10.0
+			base = base * 7.0
 			letter = succession[letter]
 		end
 		
