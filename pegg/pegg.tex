@@ -2,6 +2,7 @@
 \usepackage{longtable}
 \usepackage{hyperref}
 \newcommand\soft{slop}
+\directlua{dofile("pegg.lua")}
 \begin{document}
 I had a spreadsheet of what \href{https://googology.miraheze.org/wiki/Psi%27s_Ever-Growing_Googolism}{PEGG} was about to be up to had PsiCubed not left the community before defining R.
 R\(x\) was meant to correspond to approximately \(f_{\Gamma_0}(x)\) in FGH;
@@ -12,6 +13,12 @@ I didn't want to do it on Google Sheets, but I also didn't really have anywhere 
 With Apple starting to take a Micro\soft\ approach to their answers to Word, Excel, and PowerPoint, I saw fit to port my spreadsheets to \TeX, though.
 
 \begin{longtable}{r|crl}
-\directlua{dofile("pegg.lua")}
+\directlua{realchart()}
+\end{longtable}
+
+Actually, why stop there? Let's speculate! Here, the figures with \(\pm\) are the standard error, uncertainty, or whatever term is most applicable here. Thus, we can be 95\%\ sure that the difference between the ``real" value on a day and the prediction is at most double this uncertainty---at least, once it's far enough out that the central limit theorem applies.
+
+\begin{longtable}{r|crcl}
+\directlua{speculativechart(2027,1,1)}
 \end{longtable}
 \end{document}

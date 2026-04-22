@@ -1,8 +1,12 @@
 closures = dofile("dow.lua")
 date = os.time({year=2023, month=9, day=29})
+letter = "R"
+succession = {R="S", S="T", T="V", V="W", W="X", X="Y", Y="Z"} -- todo: add Æ and Б
 base = 1977326743 -- 7^11
 increment = base * 100 -- closures["2023-09-29"] ends in a 0
 value = 20000000000000 - increment -- start on the day before the R era
+denominator = 10000000000000
+uncertainty = 0
 latest_data = os.time(closures.latest_data)
 
 function is_closed(date)
@@ -50,6 +54,9 @@ function is_closed(date)
 	if d.wday ~= 6 then return false end -- not a Friday
 	d = os.date("*t", date + 2*24*60*60) -- use the Sunday after it
 	if d.month >= 5 or d.month <= 2 then return false end -- Good Friday never lands in February or May
+	-- algorithm taken from Winning Ways (Berlekamp, Conway, Guy) chapter 24
+	-- honestly, you should get that book anyway, it's peak.
+	-- all three of its authors died in 2019 or 2020, RIP
 	local golden_number = d.year % 19 + 1
 	local c = (d.year//100)
 	local correction = -c + (c//4) + (8*(c+11))//25
@@ -61,20 +68,54 @@ function is_closed(date)
 	return 1 <= difference and difference <= 7
 end
 
-repeat
-	date = date + 24*60*60
-	local key = os.date("%Y-%m-%d", date)
-	value = value + increment
-	
-	tex.write(key)
-	tex.print("& R &")
-	tex.write(("%.4f"):format(value / 10^13))
-	tex.print("&")
-	tex.write(("(+%.6f)"):format(increment / 10^13))
-	tex.print("\\\\")
-	
-	if closures[key] then
-		increment = math.tointeger((math.floor(closures[key] * 100 + 0.1) % 10)^2 * base)
-		if increment == 0 then increment = 100 * base end -- handle 0's properly
-	end
-until date > latest_data and not is_closed(date)
+function realchart()
+	repeat
+		date = date + 24*60*60
+		local key = os.date("%Y-%m-%d", date)
+		value = value + increment
+		
+		tex.write(key)
+		tex.print(("& %s &"):format(letter))
+		tex.write(("%.4f"):format(value / denominator))
+		tex.print("&")
+		tex.write(("(+%.6f)"):format(increment / denominator))
+		tex.print("\\\\")
+		
+		if closures[key] then
+			increment = math.tointeger((math.floor(closures[key] * 100 + 0.1) % 10)^2 * base)
+			if increment == 0 then increment = 100 * base end -- handle 0's properly
+		end
+	until date > latest_data and not is_closed(date)
+end
+
+function speculativechart(end_year, end_month, end_day)
+	local target = os.time({year=end_year, month=end_month, day=end_day})
+	local closed_multiplier = 1 -- goes up with each day closed to account for dependence
+	repeat
+		date = date + 24*60*60
+		local key = os.date("%Y-%m-%d", date)
+		value = value + base * 38.5
+		print(key, closed_multiplier)
+		uncertainty = uncertainty + (base/denominator)^2 * 1051.05 * closed_multiplier
+		if is_closed(date) then
+			closed_multiplier = closed_multiplier + 2
+		else
+			closed_multiplier = 1
+		end
+		
+		if value >= 10 * denominator then
+			value = value * 7 - 50*denominator
+			uncertainty = uncertainty * 0.49
+			denominator = denominator * 10
+			base = base * 7
+			letter = succession[letter]
+		end
+		
+		tex.write(key)
+		tex.print(("& %s &"):format(letter))
+		tex.write(("%.4f"):format(value / denominator))
+		tex.print("& \\pm &")
+		tex.write(("%.4f"):format(math.sqrt(uncertainty)))
+		tex.print("\\\\")
+	until date >= target
+end
