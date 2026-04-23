@@ -43,6 +43,7 @@ my_scores = {
 		Bee={xx=true}, -- I didn't take a picture of the score. this is scored as an A (0.8x)
 		Snapping={xx=true},
 		["ERRORCODE: 0"]={rank="AA+", xx=true},
+		["Witch Doctor"]={rank="AA+", xx=true}, -- actually on SP1+ on the XX machine. the coin system wasn't working that day so the operator just opened SP1+ instead
 	},
 	D19 = {
 		["Get Up (and go)"]={rank="AAA+", xx=true},
