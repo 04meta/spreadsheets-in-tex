@@ -31,12 +31,12 @@ my_scores = {
 		Vacuum={rank="AAA"},
 		["Bad Apple!!"]={rank="AA+", xx=true},
 		["Can-can ~Orpheus in The Party Mix~"]={rank="AA+"},
-		Extravaganza={rank="AA+", xx=true},
+		Extravaganza={rank="AA+"},
 		Conflict={rank="AA"},
 		["Dream to Nightmare"]={rank="AA", xx=true},
 		EMOMOMO={rank="AA"},
 		Moonlight={rank="AA", xx=true},
-		Passacaglia={rank="AA"},
+		Passacaglia={rank="AA+"},
 		["Super Fantasy"]={rank="AA", xx=true},
 		["DJ Otada"]={rank="A+", xx=true},
 		["Hello William"]={rank="A+", xx=true},
@@ -68,7 +68,7 @@ my_scores = {
 	D20 = {
 		STAGER={rank="AAA"},
 		Accident={rank="AA+"},
-		Gargoyle={rank="AA", xx=true},
+		Gargoyle={rank="A+"},
 		Moonlight={rank="AA", xx=true},
 		Tepris={rank="AA", xx=true}, -- I have an HJ clear on this with 19 gauge (because it's D19 in XX). that's... something?
 		["DJ Otada"]={xx=true},
@@ -79,7 +79,7 @@ my_scores = {
 		Paradoxx={rank="A+", xx=true},
 	},
 	D21 = {
-		["Twist of Fate"]={rank="AAA", xx=true},
+		["Twist of Fate"]={rank="AA+"},
 	},
 }
 
