@@ -44,12 +44,13 @@ my_scores = {
 		Snapping={xx=true},
 		["ERRORCODE: 0"]={rank="AA+", xx=true},
 		["Witch Doctor"]={rank="AA+", xx=true}, -- actually on SP1+ on the XX machine. the coin system wasn't working that day so the operator just opened SP1+ instead
+		["Broken Karma"]={rank="A+", xx=true},
 	},
 	D19 = {
 		["Get Up (and go)"]={rank="AAA+", xx=true},
 		["Jonathan's Dream"]={rank="AAA", xx=true},
 		Overblow={rank="AAA"},
-		Desaparecer={rank="AA+", xx=true},
+		Desaparecer={rank="AAA", xx=true},
 		Mopemope={rank="AA+", xx=true},
 		["King of Sales"]={xx=true}, -- I have HJ and a 7-miss on this but since the chart's gone in Phoenix I can't give it a Phoenix grade
 		["Papa Gonzales"]={rank="AA"},
@@ -73,6 +74,7 @@ my_scores = {
 		Tepris={rank="AA", xx=true}, -- I have an HJ clear on this with 19 gauge (because it's D19 in XX). that's... something?
 		["DJ Otada"]={xx=true},
 		Cleaner={rank="AAA", xx=true},
+		["Vacuum Cleaner"]={rank="AA+", xx=true},
 	},
 	S21 = {
 		["Gargoyle - FULL SONG"]={rank="AA+", xx=true}, -- EXC's chart
