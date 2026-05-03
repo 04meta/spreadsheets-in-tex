@@ -45,6 +45,7 @@ my_scores = {
 		["ERRORCODE: 0"]={rank="AA+", xx=true},
 		["Witch Doctor"]={rank="AA+", xx=true}, -- actually on SP1+ on the XX machine. the coin system wasn't working that day so the operator just opened SP1+ instead
 		["Broken Karma"]={rank="A+", xx=true},
+		["Twist of Fate"]={rank="AA+", xx=true},
 	},
 	D19 = {
 		["Get Up (and go)"]={rank="AAA+", xx=true},
@@ -53,7 +54,7 @@ my_scores = {
 		Desaparecer={rank="AAA", xx=true},
 		Mopemope={rank="AA+", xx=true},
 		["King of Sales"]={xx=true}, -- I have HJ and a 7-miss on this but since the chart's gone in Phoenix I can't give it a Phoenix grade
-		["Papa Gonzales"]={rank="AA"},
+		["Papa Gonzales"]={rank="AA"}, -- AA+ in XX
 		["The Revolution"]={rank="AA"}, -- I *think* I just forgot to mark this as XX? it has no hold-tick changes in Phoenix, but it's not on my card
 		["Pump me Amadeus"]={rank="A+"},
 	},
@@ -79,6 +80,7 @@ my_scores = {
 	S21 = {
 		["Gargoyle - FULL SONG"]={rank="AA+", xx=true}, -- EXC's chart
 		Paradoxx={rank="A+", xx=true},
+		["Beethoven Virus"]={rank="A+", xx=true}, -- XX chart, with runs instead of spins
 	},
 	D21 = {
 		["Twist of Fate"]={rank="AA+"},
