@@ -79,7 +79,7 @@ function stylechart(style, diff, dry_run)
 	local key = style .. diff
 	local scores = my_scores[key]
 	local total_rating = 0
-	if not dry_run then tex.print("\\begin{tabular}{r l c r}") end
+	if not dry_run then tex.print("\\frenchspacing\\begin{tabular}{r l c r}") end
 	for song, score in pairs(scores) do
 		local rating = (base * rating_table[score.rank or "A"] + 50) // 100
 		if not dry_run then
@@ -91,7 +91,7 @@ function stylechart(style, diff, dry_run)
 	if not dry_run then
 		tex.print("\\hline")
 		tex.print("Total & & & " .. total_rating)
-		tex.print("\\end{tabular}")
+		tex.print("\\end{tabular}\\nonfrenchspacing")
 	end
 	tex.setcount("totalrating", total_rating)
 end
@@ -111,7 +111,7 @@ function fullchart(diff, dry_run)
 		table.insert(scores, score)
 	end
 	local total_rating = 0
-	if not dry_run then tex.print("\\begin{tabular}{r l c r}") end
+	if not dry_run then tex.print("\\frenchspacing\\begin{tabular}{r l c r}") end
 	for _, score in pairs(scores) do
 		local rating = (base * rating_table[score.rank or "A"] + 50) // 100
 		if not dry_run then
@@ -123,7 +123,7 @@ function fullchart(diff, dry_run)
 	if not dry_run then
 		tex.print("\\hline")
 		tex.print("Total & & & " .. total_rating)
-		tex.print("\\end{tabular}")
+		tex.print("\\end{tabular}\\nonfrenchspacing")
 	end
 	tex.setcount("totalrating", total_rating)
 end
@@ -131,7 +131,7 @@ end
 function coopchart(dry_run)
 	local base = 2000
 	local total_rating = 0
-	if not dry_run then tex.print("\\begin{tabular}{r c c r}") end
+	if not dry_run then tex.print("\\frenchspacing\\begin{tabular}{r c c r}") end
 	for song, score in pairs(my_coop_scores) do
 		local rating = (base * rating_table[score.rank or "A"] + 50) // 100
 		if not dry_run then
@@ -143,7 +143,7 @@ function coopchart(dry_run)
 	if not dry_run then
 		tex.print("\\hline")
 		tex.print("Total & & & " .. total_rating)
-		tex.print("\\end{tabular}")
+		tex.print("\\end{tabular}\\nonfrenchspacing")
 	end
 	tex.setcount("totalrating", total_rating)
 end
