@@ -21,32 +21,6 @@ tier_names = {
 }
 
 my_scores = {
-	S19 = {
-		--[[
-			my original spreadsheet had the tier of each song listed with the song,
-			but the difference between a "high" and a "low" 20 turns out to not be very big
-		]]
-		STAGER={rank="S"},
-		["Shub Niggurath"]={rank="AAA"},
-		Vacuum={rank="AAA"},
-		["Bad Apple!!"]={rank="AA+", xx=true},
-		["Can-can ~Orpheus in The Party Mix~"]={rank="AA+"},
-		Extravaganza={rank="AA+"},
-		Conflict={rank="AA"},
-		["Dream to Nightmare"]={rank="AA", xx=true},
-		EMOMOMO={rank="AA"},
-		Moonlight={rank="AA", xx=true},
-		Passacaglia={rank="AA+"},
-		["Super Fantasy"]={rank="AA", xx=true},
-		["DJ Otada"]={rank="A+", xx=true},
-		["Hello William"]={rank="A+", xx=true},
-		Bee={xx=true}, -- I didn't take a picture of the score. this is scored as an A (0.8x)
-		Snapping={xx=true},
-		["ERRORCODE: 0"]={rank="AA+", xx=true},
-		["Witch Doctor"]={rank="AA+", xx=true}, -- actually on SP1+ on the XX machine. the coin system wasn't working that day so the operator just opened SP1+ instead
-		["Broken Karma"]={rank="A+", xx=true},
-		["Twist of Fate"]={rank="AA+", xx=true},
-	},
 	D19 = {
 		["Get Up (and go)"]={rank="AAA+", xx=true},
 		["Jonathan's Dream"]={rank="AAA", xx=true},
@@ -57,6 +31,8 @@ my_scores = {
 		["Papa Gonzales"]={rank="AA"}, -- AA+ in XX
 		["The Revolution"]={rank="AA"}, -- I *think* I just forgot to mark this as XX? it has no hold-tick changes in Phoenix, but it's not on my card
 		["Pump me Amadeus"]={rank="A+"},
+		["CO5MIC R4ILR0AD"]={rank="AA", xx=true}, -- of course, the song doesn't exist in XX, but .xx now has the legacy meaning of "not on my card" and this was done on SP1+
+		["Pop Sequence"]={rank="AAA", xx=true}, -- how did I not realize earlier that this one existed, I even watched stepzwa's video about Phoenix removing charts like the D22
 	},
 	S20 = {
 		["8 6"]={rank="SS", xx=true},
@@ -66,6 +42,7 @@ my_scores = {
 		GLORIA={rank="AA", xx=true},
 		["Vacuum Cleaner"]={rank="A+", xx=true},
 		Winter={rank="A+", xx=true}, -- also a 19 in XX
+		["Mr. Larpus"]={rank="A+", xx=true},
 	},
 	D20 = {
 		STAGER={rank="AAA"},
@@ -76,6 +53,7 @@ my_scores = {
 		["DJ Otada"]={xx=true},
 		Cleaner={rank="AAA", xx=true},
 		["Vacuum Cleaner"]={rank="AA+", xx=true},
+		["X-Tree"]={rank="A+", xx=true}, -- 899397 is still A+ :(
 	},
 	S21 = {
 		["Gargoyle - FULL SONG"]={rank="AA+", xx=true}, -- EXC's chart
