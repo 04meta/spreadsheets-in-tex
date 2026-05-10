@@ -33,6 +33,7 @@ my_scores = {
 		["Pump me Amadeus"]={rank="A+"},
 		["CO5MIC R4ILR0AD"]={rank="AA", xx=true}, -- of course, the song doesn't exist in XX, but .xx now has the legacy meaning of "not on my card" and this was done on SP1+
 		["Pop Sequence"]={rank="AAA", xx=true}, -- how did I not realize earlier that this one existed, I even watched stepzwa's video about Phoenix removing charts like the D22
+		["Witch Doctor"]={rank="AA", xx=true},
 	},
 	S20 = {
 		["8 6"]={rank="SS", xx=true},
@@ -54,6 +55,7 @@ my_scores = {
 		Cleaner={rank="AAA", xx=true},
 		["Vacuum Cleaner"]={rank="AA+", xx=true},
 		["X-Tree"]={rank="A+", xx=true}, -- 899397 is still A+ :(
+		["Pumptris Quattro"]={rank="AA+", xx=true},
 	},
 	S21 = {
 		["Gargoyle - FULL SONG"]={rank="AA+", xx=true}, -- EXC's chart
