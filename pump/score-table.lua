@@ -27,7 +27,7 @@ my_scores = {
 		Overblow={rank="AAA"},
 		Desaparecer={rank="AAA", xx=true},
 		Mopemope={rank="AA+", xx=true},
-		["King of Sales"]={xx=true}, -- I have HJ and a 7-miss on this but since the chart's gone in Phoenix I can't give it a Phoenix grade
+		["King of Sales"]={xx=true}, -- I have HJ and a 3-miss on this but since the chart's gone in Phoenix I can't give it a Phoenix grade
 		["Papa Gonzales"]={rank="AA"}, -- AA+ in XX
 		["The Revolution"]={rank="AA"}, -- I *think* I just forgot to mark this as XX? it has no hold-tick changes in Phoenix, but it's not on my card
 		["Pump me Amadeus"]={rank="A+"},
