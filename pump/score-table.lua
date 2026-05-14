@@ -56,6 +56,8 @@ my_scores = {
 		["Vacuum Cleaner"]={rank="AA+", xx=true},
 		["X-Tree"]={rank="A+", xx=true}, -- 899397 is still A+ :(
 		["Pumptris Quattro"]={rank="AA+", xx=true},
+		["Baroque Virus - FULL SONG"]={rank="AA+", xx=true},
+		["Full Moon"]={rank="AA", xx=true},
 	},
 	S21 = {
 		["Gargoyle - FULL SONG"]={rank="AA+", xx=true}, -- EXC's chart
