@@ -23,7 +23,6 @@ tier_names = {
 my_scores = {
 	D19 = {
 		["Get Up (and go)"]={rank="AAA+", xx=true},
-		["Jonathan's Dream"]={rank="AAA", xx=true},
 		Overblow={rank="AAA"},
 		Desaparecer={rank="AAA", xx=true},
 		Mopemope={rank="AA+", xx=true},
@@ -34,6 +33,7 @@ my_scores = {
 		["CO5MIC R4ILR0AD"]={rank="AA", xx=true}, -- of course, the song doesn't exist in XX, but .xx now has the legacy meaning of "not on my card" and this was done on SP1+
 		["Pop Sequence"]={rank="AAA", xx=true}, -- how did I not realize earlier that this one existed, I even watched stepzwa's video about Phoenix removing charts like the D22
 		["Witch Doctor"]={rank="AA", xx=true},
+		["Jonathan's Dream"]={rank="S", xx=true},
 	},
 	S20 = {
 		["8 6"]={rank="SS", xx=true},
