@@ -22,7 +22,6 @@ tier_names = {
 
 my_scores = {
 	D19 = {
-		["Get Up (and go)"]={rank="AAA+", xx=true},
 		Overblow={rank="AAA"},
 		Desaparecer={rank="AAA", xx=true},
 		Mopemope={rank="AA+", xx=true},
@@ -34,9 +33,10 @@ my_scores = {
 		["Pop Sequence"]={rank="AAA", xx=true}, -- how did I not realize earlier that this one existed, I even watched stepzwa's video about Phoenix removing charts like the D22
 		["Witch Doctor"]={rank="AA", xx=true},
 		["Jonathan's Dream"]={rank="S", xx=true},
+		["Get Up (and go)"]={rank="AAA"}, -- AAA+ in XX
+		["Barber's Madness"]={rank="AA+"},
 	},
 	S20 = {
-		["8 6"]={rank="SS", xx=true},
 		Overblow={rank="AA+"},
 		["X-Tree"]={rank="AA+", xx=true},
 		Desaparecer={rank="AA", xx=true},
@@ -44,10 +44,11 @@ my_scores = {
 		["Vacuum Cleaner"]={rank="A+", xx=true},
 		Winter={rank="A+", xx=true}, -- also a 19 in XX
 		["Mr. Larpus"]={rank="A+", xx=true},
+		["8 6"]={rank="S+"}, -- SS in XX
 	},
 	D20 = {
 		STAGER={rank="AAA"},
-		Accident={rank="AA+"},
+		Accident={rank="AA+"}, -- AAA in XX
 		Gargoyle={rank="A+"},
 		Moonlight={rank="AA", xx=true},
 		Tepris={rank="AA", xx=true}, -- I have an HJ clear on this with 19 gauge (because it's D19 in XX). that's... something?
@@ -76,6 +77,9 @@ my_coop_scores = {
 	["Pumptris 8Bit ver."]={tier="하", rank="AAA+"},
 	Chimera={tier="하", rank="AA+"},
 	["You again my love"]={tier="입문", rank="AA+"},
+	["Super Fantasy"]={tier="하", rank="SS"},
+	["Sorceress Elise"]={tier="하", rank="SS"},
+	Reminiscence={tier="중", rank="AA+"},
 }
 
 function stylechart(style, diff, dry_run)
