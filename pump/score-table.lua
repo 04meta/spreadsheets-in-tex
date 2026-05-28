@@ -39,12 +39,12 @@ my_scores = {
 	S20 = {
 		Overblow={rank="AA+"},
 		["X-Tree"]={rank="AA+", xx=true},
-		Desaparecer={rank="AA", xx=true},
 		GLORIA={rank="AA", xx=true},
 		["Vacuum Cleaner"]={rank="A+", xx=true},
 		Winter={rank="A+", xx=true}, -- also a 19 in XX
-		["Mr. Larpus"]={rank="A+", xx=true},
 		["8 6"]={rank="S+"}, -- SS in XX
+		Desaparecer={rank="AA+", xx=true},
+		["Mr. Larpus"]={rank="AA", xx=true},
 	},
 	D20 = {
 		STAGER={rank="AAA"},
@@ -59,6 +59,7 @@ my_scores = {
 		["Pumptris Quattro"]={rank="AA+", xx=true},
 		["Baroque Virus - FULL SONG"]={rank="AA+", xx=true},
 		["Full Moon"]={rank="AA", xx=true},
+		Reminiscence={rank="AA", xx=true},
 	},
 	S21 = {
 		["Gargoyle - FULL SONG"]={rank="AA+", xx=true}, -- EXC's chart
