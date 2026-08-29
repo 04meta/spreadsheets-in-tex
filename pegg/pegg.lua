@@ -1,5 +1,5 @@
 closures = dofile("dow.lua")
-date = os.time({year=2023, month=9, day=29})
+date = os.time({year=2023, month=9, day=29}) -- this is the day before the sheet rolled over from Q to R and the number stopped being well-defined
 letter = "R"
 succession = {R="S", S="T", T="V", V="W", W="X", X="Y", Y="Z"} -- todo: add Æ and Б
 base = 1977326743 -- 7^11
@@ -74,6 +74,14 @@ function realchart()
 		local key = os.date("%Y-%m-%d", date)
 		value = value + increment
 		
+		if value >= 10 * denominator then
+			value = denominator * 20 -- it's supposed to be a conversion, but this will never actually matter because F[Gamma_0](10.006) is going to be F[SVO](2+epsilon) for a very small epsilon anyway
+			-- increment is going to be wrong on these days but what can you do
+			denominator = denominator * 10
+			base = base * 7.0
+			letter = succession[letter]
+		end
+		
 		tex.write(key)
 		tex.print(("& %s &"):format(letter))
 		tex.write(("%.4f"):format(value / denominator))
@@ -103,7 +111,7 @@ function speculativechart(end_year, end_month, end_day)
 		end
 		
 		if value >= 10 * denominator then
-			value = value * 7.0 - 50.0*denominator
+			value = value * 7.0 - 50.0*denominator -- probably incorrect but the correct method would involve calculating the distribution of how much progress is "lost" to rollovers starting at almost exactly 2 instead of this
 			uncertainty = uncertainty * 0.49
 			denominator = denominator * 10.0
 			base = base * 7.0
